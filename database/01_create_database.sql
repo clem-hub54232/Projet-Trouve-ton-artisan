@@ -1,12 +1,6 @@
 -- Trouve ton artisan - création de la base
 -- Compatible MySQL 8+ / MariaDB 10.6+
 
-CREATE DATABASE IF NOT EXISTS trouve_ton_artisan
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
-
-USE trouve_ton_artisan;
-
 CREATE TABLE IF NOT EXISTS categories (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   name VARCHAR(80) NOT NULL,

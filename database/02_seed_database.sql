@@ -1,7 +1,6 @@
 -- Trouve ton artisan - alimentation de la base
 -- Données reprises du fichier data.xlsx fourni avec le brief.
 
-USE trouve_ton_artisan;
 
 SET FOREIGN_KEY_CHECKS = 0;
 TRUNCATE TABLE artisans;
