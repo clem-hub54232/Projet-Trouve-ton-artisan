@@ -7,7 +7,7 @@ Projet full-stack réalisé à partir du brief « Trouve ton artisan » pour la 
 - Front-end : ReactJS, Bootstrap, Sass
 - API : Node.js, Express
 - Base de données : MySQL/MariaDB avec Sequelize
-- Maquettage : Figma (captures de référence fournies dans `docs/maquettes/`)
+- Maquettage : Figma
 - Versionnement : Git / GitHub
 
 ## Prérequis
@@ -22,8 +22,8 @@ Projet full-stack réalisé à partir du brief « Trouve ton artisan » pour la 
 1. Cloner le dépôt :
 
 ```bash
-git clone <URL_DU_REPOSITORY_GITHUB>
-cd trouve-ton-artisan
+git clone https://github.com/clem-hub54232/Projet-Trouve-ton-artisan.git
+cd Projet-Trouve-ton-artisan
 ```
 
 2. Installer les dépendances :
@@ -72,6 +72,22 @@ NODE_ENV=production npm start
 
 En production, Express sert également le dossier `client/dist`, ce qui permet de déployer le front-end et l'API sur le même domaine.
 
+## Déploiement actuel
+
+Le projet est actuellement déployé avec :
+
+- Front-end React : Render Static Site
+- API Node.js / Express : Render Web Service
+- Base de données MySQL : Aiven
+
+Pour le front-end déployé, la variable d'environnement suivante permet de joindre l'API :
+
+```env
+VITE_API_URL=https://trouve-ton-artisan-swua.onrender.com/api
+```
+
+Sur le service backend Render, `FRONTEND_URL` doit correspondre à l'URL du site front-end afin d'autoriser correctement les requêtes CORS.
+
 ## Configuration SMTP du formulaire de contact
 
 Le formulaire envoie un e-mail à l'adresse de l'artisan stockée en base. Renseigner dans `server/.env` :
@@ -107,18 +123,18 @@ trouve-ton-artisan/
 ├── client/                 # application React
 ├── server/                 # API Express + Sequelize
 ├── database/               # scripts SQL création + alimentation
-├── docs/                   # dossier, schémas, maquettes, veille
 ├── README.md
 └── package.json
 ```
 
-## Liens à compléter avant rendu
+## Liens du projet
 
 - Maquettes Figma : `<LIEN_FIGMA_A_AJOUTER>`
-- Repository GitHub : `<LIEN_GITHUB_A_AJOUTER>`
-- Site en ligne : `<LIEN_SITE_A_AJOUTER>`
+- Repository GitHub : https://github.com/clem-hub54232/Projet-Trouve-ton-artisan
+- Site en ligne : https://trouve-ton-artisan-site.onrender.com
+- API : https://trouve-ton-artisan-swua.onrender.com
 
-Ces trois liens dépendent de vos comptes personnels. Les emplacements sont déjà prévus dans le dossier de rendu.
+Le lien Figma est à compléter avant le rendu final.
 
 ## Police Graphik
 
