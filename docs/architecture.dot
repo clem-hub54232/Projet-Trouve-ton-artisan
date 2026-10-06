@@ -1,0 +1,16 @@
+digraph Architecture {
+  graph [rankdir=LR, bgcolor="white", pad="0.3", nodesep="0.8", ranksep="0.9"];
+  node [shape=box, fontname="Arial", fontsize=11, color="#00497c", penwidth=1.5, style="rounded,filled", fillcolor="#f1f8fc", margin="0.15,0.10"];
+  edge [fontname="Arial", fontsize=10, color="#384050", penwidth=1.3];
+
+  user [label="Navigateur\nParticulier", fillcolor="#ffffff"];
+  react [label="ReactJS + Bootstrap + Sass\nInterface responsive / WCAG"];
+  express [label="Node.js + Express\nAPI REST + sécurité"];
+  mysql [label="MySQL / MariaDB\nSequelize", fillcolor="#ffffff"];
+  smtp [label="Serveur SMTP\nFormulaire de contact", fillcolor="#ffffff"];
+
+  user -> react [label="HTTPS"];
+  react -> express [label="/api - même origine"];
+  express -> mysql [label="requêtes ORM"];
+  express -> smtp [label="e-mail"];
+}

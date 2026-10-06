@@ -1,0 +1,12 @@
+digraph MLD {
+  graph [rankdir=TB, bgcolor="white", pad="0.25", nodesep="0.6", ranksep="0.7"];
+  node [shape=record, fontname="Arial", fontsize=10.5, color="#00497c", penwidth=1.5, style="rounded,filled", fillcolor="#f1f8fc"];
+  edge [fontname="Arial", fontsize=9.5, color="#384050", penwidth=1.2];
+
+  categories [label="{categories|PK id : INT UNSIGNED\lname : VARCHAR(80) UNIQUE\lslug : VARCHAR(80) UNIQUE\l}"];
+  specialties [label="{specialties|PK id : INT UNSIGNED\lname : VARCHAR(100)\lFK category_id : INT UNSIGNED\lUNIQUE(name, category_id)\l}"];
+  artisans [label="{artisans|PK id : INT UNSIGNED\lname : VARCHAR(160)\lrating : DECIMAL(2,1)\lcity : VARCHAR(120)\labout : TEXT\lemail : VARCHAR(190)\lwebsite : VARCHAR(255) NULL\lis_top : BOOLEAN\lFK specialty_id : INT UNSIGNED\l}"];
+
+  categories -> specialties [label="  1 -> N  "];
+  specialties -> artisans [label="  1 -> N  "];
+}
